@@ -3,7 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>RDC-Services</title>
+  <title>Best Diagnostic Centre in Bengaluru | Blood Tests, X-Ray, Ultrasound – Raghavendra Diagnostic Centre</title>
+
+<meta name="description" content="Raghavendra Diagnostic Centre is a trusted diagnostic centre in Bengaluru offering blood tests, ultrasound, digital X-ray, ECG, TMT, Doppler scans and complete health checkup packages with accurate reports.">
+
+  <!-- SEO META DESCRIPTION -->
+  <meta name="description" content="Raghavendra Diagnostic Centre is a trusted diagnostic centre in Bengaluru offering blood tests, pathology, ultrasound scans, digital X-ray, ECG, TMT, Doppler and complete health checkup packages with accurate reports.">
+
+  <!-- SEO KEYWORDS -->
+  <meta name="keywords" content="diagnostic centre in bengaluru, blood test lab near me, pathology lab bengaluru, ultrasound scan bengaluru, digital x ray centre, ECG test near me, TMT test bengaluru, doppler scan bengaluru, health checkup packages">
+
+  <!-- AUTHOR -->
+  <meta name="author" content="Raghavendra Diagnostic Centre">
+
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://raghavendradiagnosticcentre.com/">
+
+  <!-- LOCAL BUSINESS SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Raghavendra Diagnostic Centre",
+    "url": "https://raghavendradiagnosticcentre.com",
+    "telephone": "+91-8722202917",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "#1222, 2nd Floor, 80 Feet Road, Chandra Layout",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "KA",
+      "postalCode": "560040",
+      "addressCountry": "IN"
+    },
+    "medicalSpecialty": [
+      "Pathology",
+      "Radiology",
+      "Diagnostic Imaging"
+    ]
+  }
+  </script>
+
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/servies.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -522,138 +562,137 @@
         </div>
     </div>
 </footer>
+<script>
+  const API_BASE_URL = "https://web-production-e75ae.up.railway.app";
+</script>
 
 <script src="script/script.js"></script>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
-        /* ============================
-        MAIN BOOK TEST POPUP (SPG)
-        ============================= */
-        const spgModal = document.getElementById("spgBookingModal");
-        const spgOpenBtn = document.getElementById("openBooking");
-        const spgCloseBtn = document.getElementById("spgCloseModal");
-        const spgForm = document.getElementById("spgBookingForm");
-        const spgSuccess = document.getElementById("spgSuccessPopup");
-        const spgSuccessClose = document.getElementById("spgCloseSuccess");
+  /* ============================
+     MAIN BOOK TEST POPUP (SPG)
+  ============================= */
+  const spgModal = document.getElementById("spgBookingModal");
+  const spgOpenBtn = document.getElementById("openBooking");
+  const spgCloseBtn = document.getElementById("spgCloseModal");
+  const spgForm = document.getElementById("spgBookingForm");
+  const spgSuccess = document.getElementById("spgSuccessPopup");
+  const spgSuccessClose = document.getElementById("spgCloseSuccess");
 
-        // Open modal
-        spgOpenBtn.addEventListener("click", () => {
-            spgModal.style.display = "flex";
-        });
-
-        // Close modal
-        spgCloseBtn.addEventListener("click", () => {
-            spgModal.style.display = "none";
-        });
-
-        // // Click outside close
-        // window.addEventListener("click", (e) => {
-        //     if (e.target === spgModal) spgModal.style.display = "none";
-        // });
-
-        // Submit SPG booking
-        spgForm.addEventListener("submit", async (e) => {
-            e.preventDefault();
-
-            const payload = {
-                name: spgForm.querySelector('[name="name"]').value.trim(),
-                mobile: spgForm.querySelector('[name="mobile"]').value.trim(),
-                email: spgForm.querySelector('[name="email"]').value.trim(),
-                test_name: spgForm.querySelector('[name="test_name"]').value.trim(),
-                message: spgForm.querySelector('[name="message"]').value.trim()
-            };
-
-            const res = await fetch("http://127.0.0.1:5000/book-test", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(payload)
-            });
-
-            const data = await res.json();
-            if (data.status !== "success") {
-                alert(data.message || "Submission failed");
-                return;
-            }
-
-            spgModal.style.display = "none";
-            spgSuccess.style.display = "flex";
-
-        });
-
-
-
-    spgSuccessClose?.addEventListener("click", () => {
-        spgSuccess.style.display = "none";
+  // Open modal
+  if (spgOpenBtn && spgModal) {
+    spgOpenBtn.addEventListener("click", () => {
+      spgModal.style.display = "flex";
     });
+  }
 
+  // Close modal
+  if (spgCloseBtn && spgModal) {
+    spgCloseBtn.addEventListener("click", () => {
+      spgModal.style.display = "none";
+    });
+  }
 
+  // Submit SPG booking
+  if (spgForm) {
+    spgForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
+      const payload = {
+        name: spgForm.querySelector('[name="name"]').value.trim(),
+        mobile: spgForm.querySelector('[name="mobile"]').value.trim(),
+        email: spgForm.querySelector('[name="email"]').value.trim(),
+        test_name: spgForm.querySelector('[name="test_name"]').value.trim(),
+        message: spgForm.querySelector('[name="message"]').value.trim()
+      };
 
-        /* ============================
-        SERVICE CARD "BOOK NOW" POPUP
-        ============================= */
-        const ssbPopup = document.getElementById("ssbPopup");
-        const ssbForm = document.getElementById("ssbBookingForm");
-        const ssbTestName = document.getElementById("ssbTestName");
-        const ssbSuccess = document.getElementById("ssbSuccessMsg");
+      const res = await fetch(`${API_BASE_URL}/book-test`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
 
-        // Open popup on "Book Now"
-        document.querySelectorAll(".servicebook-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-                const test = btn.closest(".service-card").querySelector("h3").innerText;
-                ssbTestName.value = test;
-                ssbSuccess.style.display = "none";
-                ssbPopup.style.display = "flex";
-            });
-        });
+      if (!res.ok) {
+        alert("Server error. Please try again later.");
+        return;
+      }
 
-        // Close popup
-        window.closePopup = function () {
-            ssbPopup.style.display = "none";
-            ssbForm.reset();
-            ssbSuccess.style.display = "none";
-        };
+      const data = await res.json();
+      if (data.status !== "success") {
+        alert(data.message || "Submission failed");
+        return;
+      }
 
-        // // Click outside to close
-        // window.addEventListener("click", (e) => {
-        //     if (e.target === ssbPopup) closePopup();
-        // });
+      spgModal.style.display = "none";
+      spgSuccess.style.display = "flex";
+    });
+  }
 
-        // Submit service booking
-ssbForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  spgSuccessClose?.addEventListener("click", () => {
+    spgSuccess.style.display = "none";
+  });
 
-    const payload = {
+  /* ============================
+     SERVICE CARD BOOKING
+  ============================= */
+  const ssbPopup = document.getElementById("ssbPopup");
+  const ssbForm = document.getElementById("ssbBookingForm");
+  const ssbTestName = document.getElementById("ssbTestName");
+  const ssbSuccess = document.getElementById("ssbSuccessMsg");
+
+  document.querySelectorAll(".servicebook-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const test = btn.closest(".service-card").querySelector("h3").innerText;
+      ssbTestName.value = test;
+      ssbSuccess.style.display = "none";
+      ssbPopup.style.display = "flex";
+    });
+  });
+
+  window.closePopup = function () {
+    if (ssbPopup) ssbPopup.style.display = "none";
+    if (ssbForm) ssbForm.reset();
+    if (ssbSuccess) ssbSuccess.style.display = "none";
+  };
+
+  if (ssbForm) {
+    ssbForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const payload = {
         name: ssbForm.querySelector('[name="name"]').value.trim(),
         mobile: ssbForm.querySelector('[name="mobile"]').value.trim(),
         email: ssbForm.querySelector('[name="email"]').value.trim(),
         test_name: ssbForm.querySelector('[name="test_name"]').value.trim(),
         message: ""
-    };
+      };
 
-    const res = await fetch("http://127.0.0.1:5000/book-test", {
+      const res = await fetch(`${API_BASE_URL}/book-test`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
-    });
+      });
 
-    const data = await res.json();
-    if (data.status !== "success") {
+      if (!res.ok) {
+        alert("Server error. Please try again later.");
+        return;
+      }
+
+      const data = await res.json();
+      if (data.status !== "success") {
         alert(data.message || "Submission failed");
         return;
-    }
+      }
 
-    ssbSuccess.style.display = "block";
-    // Do NOT reset form here
-});
-
-
-
+      ssbSuccess.style.display = "block";
+    });
+  }
 
 });
 </script>
+
 
 </body>
 </html>

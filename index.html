@@ -18,15 +18,15 @@
 <meta property="og:title" content="Raghavendra Diagnostic Centre (RDC) - Chandra Layout, Bengaluru">
 <meta property="og:description" content="Book online blood tests and home sample collection with RDC |
 Powered by Niva Health Kare | Fast & accurate results.">
-<meta property="og:image" content="https://yourwebsite.com/assets/rdc-banner.jpg">
-<meta property="og:url" content="https://yourwebsite.com/">
+<meta property="og:image" content="https://raghavendradiagnosticcentre.com/assets/rdc-banner.jpg">
+<meta property="og:url" content="https://raghavendradiagnosticcentre.com/">
 <meta property="og:type" content="website">
 
 <!-- =============== Twitter Card =============== -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="RDC - Online Blood Sample & Home Sample Collection">
 <meta name="twitter:description" content="Trusted diagnostic centre in Chandra Layout. Book your lab visit or home collection.">
-<meta name="twitter:image" content="https://yourwebsite.com/assets/rdc-banner.jpg">
+<meta name="twitter:image" content="https://raghavendradiagnosticcentre.com/assets/rdc-banner.jpg">
 
 <!-- =============== Local SEO Schema =============== -->
 <script type="application/ld+json">
@@ -34,7 +34,7 @@ Powered by Niva Health Kare | Fast & accurate results.">
   "@context": "https://schema.org",
   "@type": "DiagnosticLab",
   "name": "Raghavendra Diagnostic Centre (RDC)",
-  "image": "https://yourwebsite.com/assets/rdc-banner.jpg",
+  "image": "https://raghavendradiagnosticcentre.com/assets/rdc-banner.jpg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "#1222, 2nd Floor, 80 Feet Road, Chandra Layout",
@@ -48,7 +48,7 @@ Powered by Niva Health Kare | Fast & accurate results.">
     "latitude": "12.9580",
     "longitude": "77.5230"
   },
-  "url": "https://yourwebsite.com",
+  "url": "https://raghavendradiagnosticcentre.com",
   "telephone": "+91-XXXXXXXXXX",
   "sameAs": [
     "https://www.facebook.com/yourpage",
@@ -135,7 +135,7 @@ Powered by Niva Health Kare | Fast & accurate results.">
 
       <!-- Right Image -->
       <div class="hero-image">
-        <img src="images/bannerfirst.gif" alt="Doctor Image" />
+        <img src="images/bannerfirst.gif" alt="Doctor providing diagnostic services at RDC Bengaluru"/>
       </div>
     </div>
   </section>
@@ -326,17 +326,21 @@ Powered by Niva Health Kare | Fast & accurate results.">
         <h3>Book Your Test</h3>
         <form id="bookTestForm">
             <label>Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input type="text" name="name" class="form-name" placeholder="Enter your name" required>
+
 
             <label>Mobile Number</label>
-            <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" required>
+           <input type="tel" name="mobile" class="form-mobile" placeholder="Enter mobile number" required>
+
 
             <label>Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input type="email" name="email" class="form-email" placeholder="Enter your email" required>
+
 
             <label>Select Your Test</label>
             <!-- name must match the JS testField (test_type) so JS maps it to payload.test_name -->
-            <select id="test_name" name="test_name" required>
+            <select name="test_name" class="form-test" required>
+
                 <option value="">Select Category</option>
                 <option value="Haematology">Haematology</option>
                 <option value="Urine">Urine</option>
@@ -346,7 +350,7 @@ Powered by Niva Health Kare | Fast & accurate results.">
             </select>
 
             <label>Patient Concerns (Optional)</label>
-            <textarea id="message" name="message" placeholder="Let us know your concerns or requests…"></textarea>
+            <textarea name="message" class="form-message" placeholder="Let us know your concerns or requests…"></textarea>
 
 
             <button type="submit" class="submit-btn">Submit</button>
@@ -402,7 +406,7 @@ Powered by Niva Health Kare | Fast & accurate results.">
                    placeholder="Enter your email" required>
 
             <label>Select Test</label>
-            <select id="test_name" name="test_name" required>
+            <select name="test_name" class="form-test" required>
                 <option value="">Select Test</option>
                 <option value="Ultrasound">Ultrasound Scanning</option>
                 <option value="Doppler">Doppler</option>
@@ -413,8 +417,8 @@ Powered by Niva Health Kare | Fast & accurate results.">
             </select>
 
             <label>Patient Concerns (Optional)</label>
-            <textarea id="message" name="message"
-                      placeholder="Let us know your concerns or requests…"></textarea>
+                <textarea name="message" class="form-message" placeholder="Enter your message"></textarea>
+
 
             <button type="submit" class="submit-btn">Book</button>
         </form>
