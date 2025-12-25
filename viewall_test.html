@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+<head>
+     <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Raghavendra Diagnostic Centre | All Health Check-Up & Lab Tests in Bengaluru</title>
+  <meta name="description" content="Comprehensive health check-up packages & diagnostic tests at Raghavendra Diagnostic Centre, Bengaluru. Book online or call for accurate lab results.">
+  <meta name="keywords" content="Health Check-Up, Diagnostic Centre Bengaluru, Lab Tests, Blood Tests, Heart Check-Up, Diabetes Tests">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/alltest.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Raghavendra Diagnostic Centre",
+    "image": "https://example.com/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "#1222, 2nd Floor 80 Feet Road, Chandra Layout",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560040",
+      "addressCountry": "IN"
+    },
+    "telephone": "+918722202917",
+    "url": "https://www.ragavendradc.com",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61584436204699",
+      "https://www.instagram.com/raghavendradiagnosticcentre/",
+      "https://www.youtube.com/@rdclab9760"
+    ]
+  }
+  </script>
+
+  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RDC-all-test</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/alltest.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="wave-hero">
+  <div class="wave-inner">
+
+    <!-- Left Section -->
+    <div class="wave-left">
+      <img src="images/logo.png" alt="Logo" class="logo">
+
+      <div class="hero-text">
+        <div class="hero-title">Raghavendra Diagnostic Centre</div>
+        <div class="hero-sub">Inspiring Better Health</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="wave-nav" aria-label="Main navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="aboutus.html">About</a>
+      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="Infrastructure.html">Laboratory Infrastructure</a>
+      <a class="nav-link" href="PatientCare.html">Patient Care</a>
+      <a class="nav-cta" href="tel:+918722202917">Call Now</a>
+
+
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- Decorative Wave -->
+  <svg class="wave-svg" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,0 C360,80 1080,0 1440,80 L1440,80 L0,80 Z" fill="#fff"></path>
+  </svg>
+</header>
+
+
+
+<!-- View All Tests Banner -->
+<section class="viewall-banner">
+    <div class="viewall-banner-content">
+        <h1 class="viewall-heading">RDC Provides All Health Tests</h1>
+        <p class="viewall-description">
+            Comprehensive medical laboratory and diagnostic tests to help you monitor your health and well-being. Book your test online and get accurate results quickly.
+        </p>
+        <div class="viewall-buttons">
+            <button class="viewall-explore" onclick="window.location.href='tel:+918722202917'">
+                Call to Book
+            </button>
+
+            <button class="viewall-book">Book Your Test</button>
+        </div>
+    </div>
+</section>
+
+<!-- BOOK YOUR TEST POP-UP -->
+<div id="vatBookForm" class="vat-modal">
+    <div class="vat-modal-box">
+
+        <!-- LEFT : FORM -->
+        <div class="vat-form-left">
+            <div class="vat-modal-header">
+                <h2 class="vat-modal-heading">Book Your Test</h2>
+                <button type="button" class="vat-close-modal">×</button>
+            </div>
+
+            <form id="vatBookingForm" class="vat-form">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>Mobile Number</label>
+            <input type="tel" id="mobile" placeholder="Enter mobile number" required>
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+                <select id="vatTest" name="test" required>
+                    <option value="" disabled selected>Select Test</option>
+                    <option value="Basic Health Check-Up">Basic Health Check-Up</option>
+                    <option value="Heart Check-Up">Heart Check-Up</option>
+                    <option value="Well Women Check-Up">Well Women Check-Up</option>
+                    <option value="Diabetic Profile">Diabetic Profile</option>
+                    <option value="Executive Health Check-Up">Executive Health Check-Up</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label>Patient Concerns(Optional)</label>
+            <textarea id="message" placeholder="Let us know your concerns or requests…"></textarea>
+                <button type="submit" class="vat-submit-btn">Book now</button>
+            </form>
+        </div>
+
+        <!-- RIGHT : IMAGE -->
+        <div class="vat-form-right">
+            <img src="images/doctor_booking.png" alt="Doctor Illustration">
+        </div>
+
+    </div>
+</div>
+
+<!-- SUCCESS POP-UP -->
+<div id="vatConfirmBox" class="vat-modal">
+    <div class="vat-modal-box vat-success-box">
+        <button type="button" class="vat-close-modal success-close">×</button>
+        <h2>Success!</h2>
+        <p>Your booking has been received.</p>
+    </div>
+</div>
+
+<section class="mhc-premium" id="master-checkup">
+
+    <div class="mhc-header">
+        <h2>Master Health Check-Up</h2>
+        <p>
+            A complete and detailed diagnostic evaluation covering blood tests, organ health, imaging, and cardiac screening —
+            designed for total body assessment.
+        </p>
+    </div>
+
+    <div class="mhc-grid">
+
+        <!-- Category 1 -->
+        <div class="mhc-box">
+            <h3>General Tests</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>F.B.S. & P.P.B.S</li>
+                <li>Complete Blood Count</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="mhc-box">
+            <h3>Lipid Profile</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Total Cholesterol</li>
+                <li>LDL Cholesterol</li>
+                <li>HDL Cholesterol</li>
+                <li>Triglycerides</li>
+                <li>LDL / HDL Ratio</li>
+                <li>Chol / HDL Ratio</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="mhc-box">
+            <h3>Liver Function Test (LFT)</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Total Protein</li>
+                <li>Albumin</li>
+                <li>Alb / Globulin Ratio</li>
+                <li>Total Bilirubin</li>
+                <li>Direct / Indirect Bilirubin</li>
+                <li>ALT (SGPT)</li>
+                <li>AST (SGOT)</li>
+                <li>Alkaline Phosphatase</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="mhc-box">
+            <h3>Renal Profile</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Urea</li>
+                <li>Creatinine</li>
+                <li>Uric Acid</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+        <!-- Category 5 -->
+        <div class="mhc-box">
+            <h3>Additional Tests</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Blood Group</li>
+                <li>Urine Routine</li>
+                <li>ECG</li>
+                <li>Chest X-Ray</li>
+                <li>Ultrasound – Abdomen & Pelvis</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="mhc-premium" id="basic_health">
+    <div class="mhc-header">
+        <h2>Basic Health Check-Up</h2>
+        <p>
+            A essential health screening package that covers blood tests, organ assessment, imaging, and baseline diagnostics for overall well-being.
+        </p>
+    </div>
+
+    <div class="mhc-grid">
+
+        <!-- Category 1 -->
+        <div class="mhc-box">
+            <h3>Complete Blood Count</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Hemoglobin</li>
+                <li>P.C.V.</li>
+                <li>MCHC, MCV, MCH</li>
+                <li>Total WBC</li>
+                <li>Differential Count</li>
+                <li>ESR</li>
+                <li>Peripheral Smear</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="mhc-box">
+            <h3>Blood Sugar</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>F.B.S.</li>
+                <li>P.P.B.S.</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="mhc-box">
+            <h3>Lipid Screening</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Total Cholesterol</li>
+                <li>Triglycerides</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="mhc-box">
+            <h3>Imaging Tests</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>X-Ray Chest</li>
+                <li>Ultrasound – Abdomen & Pelvis</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+        <!-- Category 5 -->
+        <div class="mhc-box">
+            <h3>Other Tests</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>ECG</li>
+                <li>Urine Routine</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="mhc-premium" id="heart-checkup">
+    <div class="mhc-header">
+        <h2>Heart Check-Up</h2>
+        <p>
+            A complete cardiac evaluation covering blood markers, biochemical parameters, lipid profile, and essential heart imaging.
+        </p>
+    </div>
+
+    <div class="mhc-grid">
+
+        <!-- Category 1 -->
+        <div class="mhc-box">
+            <h3>Complete Blood Count</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Hemoglobin</li>
+                <li>P.C.V.</li>
+                <li>MCHC, MCV, MCH</li>
+                <li>Total WBC</li>
+                <li>Differential Count</li>
+                <li>ESR</li>
+                <li>Peripheral Smear</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 2 -->
+        <div class="mhc-box">
+            <h3>Biochemical Parameters</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>F.B.S. & P.P.B.S</li>
+                <li>Urea</li>
+                <li>Creatinine</li>
+                <li>Uric Acid</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 3 -->
+        <div class="mhc-box">
+            <h3>Lipid Profile</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Total Cholesterol</li>
+                <li>LDL Cholesterol</li>
+                <li>HDL Cholesterol</li>
+                <li>Triglycerides</li>
+                <li>LDL / HDL Ratio</li>
+                <li>Chol / HDL Ratio</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 4 -->
+        <div class="mhc-box">
+            <h3>Imaging & Cardiac Tests</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>X-Ray Chest</li>
+                <li>ECHO</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="mhc-premium" id="women-checkup">
+    <div class="mhc-header">
+        <h2>Well Women Check-Up</h2>
+        <p>
+            A comprehensive health evaluation for women including blood tests, hormonal assessment,
+            cancer screening, imaging, and routine wellness diagnostics.
+        </p>
+    </div>
+
+    <div class="mhc-grid">
+
+        <!-- Category 1 -->
+        <div class="mhc-box">
+            <h3>Complete Blood Count</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Hemoglobin</li>
+                <li>P.C.V.</li>
+                <li>MCHC, MCV, MCH, Platelet</li>
+                <li>Total WBC</li>
+                <li>Differential Count</li>
+                <li>ESR</li>
+                <li>Peripheral Smear</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 2 -->
+        <div class="mhc-box">
+            <h3>Hormonal & Biochemical Tests</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>F.B.S. & P.P.B.S</li>
+                <li>TSH</li>
+                <li>MCHC, MCV, MCH</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 3 -->
+        <div class="mhc-box">
+            <h3>Women’s Screening</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Pap Smear</li>
+                <li>Total Cholesterol & Triglycerides</li>
+                <li>Urine Routine</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 4 -->
+        <div class="mhc-box">
+            <h3>Imaging Tests</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Ultrasound Scan – Abdomen & Pelvis</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="mhc-premium" id="Diabetic-checkup">
+    <div class="mhc-header">
+        <h2>Diabetic Profile</h2>
+        <p>
+            A complete evaluation of diabetic health including blood markers, kidney function,
+            cardiac screening, and metabolic assessment.
+        </p>
+    </div>
+
+    <div class="mhc-grid">
+
+        <!-- Category 1 -->
+        <div class="mhc-box">
+            <h3>Blood Tests</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Complete Blood Count</li>
+                <li>F.B.S. & P.P.B.S</li>
+                <li>HbA1C</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 2 -->
+        <div class="mhc-box">
+            <h3>Lipid Profile</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Total Cholesterol</li>
+                <li>LDL Cholesterol</li>
+                <li>HDL Cholesterol</li>
+                <li>Triglycerides</li>
+                <li>LDL/HDL Ratio</li>
+                <li>Chol/HDL Ratio</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 3 -->
+        <div class="mhc-box">
+            <h3>Kidney Function</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Urea</li>
+                <li>Creatinine</li>
+                <li>Urine Micro Albumin</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 4 -->
+        <div class="mhc-box">
+            <h3>Electrolytes</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Sodium</li>
+                <li>Potassium</li>
+                <li>Chloride</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 5 -->
+        <div class="mhc-box">
+            <h3>Cardiac Screening</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>ECG</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="mhc-premium" id="executive-checkup">
+    <div class="mhc-header">
+        <h2>Executive Health Check-Up</h2>
+        <p>
+            A complete premium diagnostic package covering blood analysis, organ evaluation,
+            heart screening, imaging, and metabolic profiling.
+        </p>
+    </div>
+
+    <div class="mhc-grid">
+
+        <!-- Category 1 -->
+        <div class="mhc-box">
+            <h3>Blood Tests</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>F.B.S & P.P.B.S</li>
+                <li>Complete Blood Count</li>
+                <li>Hemoglobin</li>
+                <li>P.C.V.</li>
+                <li>MCHC, MCV, MCH, Platelet</li>
+                <li>Total WBC</li>
+                <li>Differential Count</li>
+                <li>ESR</li>
+                <li>Peripheral Smear</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 2 -->
+        <div class="mhc-box">
+            <h3>Lipid Profile</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Total Cholesterol</li>
+                <li>LDL Cholesterol</li>
+                <li>HDL Cholesterol</li>
+                <li>Triglycerides</li>
+                <li>LDL/HDL Ratio</li>
+                <li>Chol/HDL Ratio</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 3 -->
+        <div class="mhc-box">
+            <h3>Liver Function Test (LFT)</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Total Protein</li>
+                <li>Albumin</li>
+                <li>Alb/Globulin Ratio</li>
+                <li>Total Bilirubin</li>
+                <li>Direct Bilirubin</li>
+                <li>Indirect Bilirubin</li>
+                <li>ALT (SGPT)</li>
+                <li>AST (SGOT)</li>
+                <li>Alkaline Phosphatase (ALP)</li>
+                <li>Gamma Glutamyl Transpeptidase (GGT)</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 4 -->
+        <div class="mhc-box">
+            <h3>Renal Profile</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Creatinine</li>
+                <li>Urea</li>
+                <li>Uric Acid</li>
+                <li>Urine Routine</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 5 -->
+        <div class="mhc-box">
+            <h3>Electrolytes & Glucose</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Sodium</li>
+                <li>Potassium</li>
+                <li>Chloride</li>
+                <li>RBS</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 6 -->
+        <div class="mhc-box">
+            <h3>Imaging & Other Tests</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>X-Ray Chest</li>
+                <li>Ultrasound Scan – Abdomen & Pelvis</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+
+        <!-- Category 7 -->
+        <div class="mhc-box">
+            <h3>Cardiac Profile</h3>
+
+            <ul class="mhc-list collapsed">
+                <li>Cardiac Stress Analysis (TMT)</li>
+                <li>ECG</li>
+            </ul>
+
+            <button class="mhc-toggle-btn">See all</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="alltestfaq">
+    <h2 class="faq-heading">Frequently Asked Questions</h2>
+
+    <div class="faq-box">
+
+        <details class="faq-item">
+            <summary class="faq-question">What health check-up packages do you offer?</summary>
+            <p class="faq-answer">
+                We offer Master Health Check-Up, Basic Health Check-Up, Heart Check-Up, Well Women Check-Up,
+                Diabetic Profile, and Executive Health Check-Up packages.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">What is included in the Master and Executive Health Check-Up?</summary>
+            <p class="faq-answer">
+                These packages include blood tests, cardiac screening, diabetes tests,
+                and preventive health assessments.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Who should take a Heart Check-Up?</summary>
+            <p class="faq-answer">
+                Recommended for those with BP, diabetes, family history of heart disease,
+                or age above 40 years.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">What is included in Well Women Check-Up?</summary>
+            <p class="faq-answer">
+                Focuses on women’s health with hormone analysis,
+                routine screening, and preventive care.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary class="faq-question">Is fasting needed for health check-ups?</summary>
+            <p class="faq-answer">
+                Yes, fasting 8–10 hours is required for tests like sugar and cholesterol. Water is allowed.
+            </p>
+        </details>
+
+    </div>
+</section>
+
+
+<section class="diagnostic-banner">
+    <div class="banner-container">
+        <div class="banner-text">
+            <h1>Premium Diagnostic & Advanced Radiology Services</h1>
+            <p>Accurate, fast, and reliable test results with certified lab & imaging services.</p>
+            <div class="banner-buttons">
+             
+
+                <!-- Icon Buttons -->
+                <a href="tel:+918722202917" class="btn-icon btn-call" title="Call Now">
+                    <img src="images/call_icon.png" alt="Call Icon">
+                </a>
+
+                <a href="https://wa.me/918722202917" target="_blank" class="btn-icon btn-whatsapp" title="Chat on WhatsApp">
+                    <img src="images/whatsapp_icon.png" alt="WhatsApp Icon">
+                </a>
+            </div>
+        </div>
+        <div class="banner-image">
+            <img src="images/diagnostic-banner.png" alt="Diagnostics Banner">
+        </div>
+    </div>
+</section>
+
+
+<footer class="diagnostic-footer">
+    <div class="footer-container">
+
+        <!-- About Section -->
+        <div class="footer-box">
+            <h3>About Us</h3>
+            <p>Trusted diagnostics and imaging services, <br> 
+            <strong>officially approved by CMC, Vellore.</strong></p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="location.html">Locate us</a></li>
+                <li><a href="Infrastructure.html">Laboratory Infrastructure</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>📍 #1222, 2nd Floor 80 Feet Road, Chandra Layout, Bengaluru -560040, Karnataka</li>
+                <li>📞 <a href="tel:+918722202917">+91 87222 02917</a></li>
+                <li>✉️ <a href="mailto:rdclab2001@gmail.com">rdclab2001@gmail.com</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-box">
+            <h3>Follow Us</h3>
+
+            <div class="footer-social">
+                <a href="https://www.instagram.com/raghavendradiagnosticcentre/" class="social-icon instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61584436204699" class="social-icon facebook" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@rdclab9760" class="social-icon youtube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom area with right-side links -->
+    <div class="footer-bottom">
+        <p>© 2025 Raghavendra Diagnostic Centre. All Rights Reserved.</p>
+
+        <div class="footer-legal-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <span>|</span>
+            <a href="security-and-privacy.html">Security & Privacy</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script/script.js"></script>
+<script src="script/alltest.js"></script>
+
+</body>
+</html>

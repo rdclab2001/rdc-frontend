@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RDC-Services</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/servies.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header class="wave-hero">
+  <div class="wave-inner">
+
+    <!-- Left Section -->
+    <div class="wave-left">
+      <img src="images/logo.png" alt="Logo" class="logo">
+
+      <div class="hero-text">
+        <div class="hero-title">Raghavendra Diagnostic Centre</div>
+        <div class="hero-sub">Inspiring Better Health</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="wave-nav" aria-label="Main navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="aboutus.html">About</a>
+      <a class="nav-link" href="services.html">Services</a>
+      <a class="nav-link" href="Infrastructure.html">Laboratory Infrastructure</a>
+      <a class="nav-link" href="PatientCare.html">Patient Care</a>
+      <a class="nav-cta" href="tel:+918722202917">Call Now</a>
+
+
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+        ☰
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- Decorative Wave -->
+  <svg class="wave-svg" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,0 C360,80 1080,0 1440,80 L1440,80 L0,80 Z" fill="#fff"></path>
+  </svg>
+</header>
+
+<!-- CENTER ANIMATED DIAGNOSTIC BANNER -->
+<section class="center-diagnostic-banner">
+    <div class="diag-box">
+        
+        <h1 class="diag-headline">
+            Advanced Diagnostic Care
+        </h1>
+
+        <p class="diag-subtitle">
+            Accurate results. Modern technology. Trusted laboratory services.
+        </p>
+
+        <ul class="diag-highlight-list">
+            <li>✔ Benchmarking Quality Against CMC Vellore Excellence</li>
+            <li>✔ Rapid Reporting with High Accuracy</li>
+            <li>✔ Experienced Diagnostic Professionals</li>
+        </ul>
+
+                <div class="diag-btn-row">
+           <button class="diag-btn primary" id="openBooking">Book Test</button>
+
+
+
+        </div>
+
+    </div>
+</section>
+
+<!-- BOOKING POPUP -->
+<div class="booking-modal" id="spgBookingModal" style="display:none;">
+    <div class="booking-content">
+        <h2>Book a Test</h2>
+
+        <form id="spgBookingForm" onsubmit="event.preventDefault();">
+            <label for="spgName">Name</label>
+            <input type="text" id="spgName" name="name" placeholder="Enter your name" required>
+
+            <label for="spgMobile">Mobile Number</label>
+            <input type="tel" id="spgMobile" name="mobile" placeholder="Enter mobile number" required maxlength="10">
+
+            <label for="spgEmail">Email</label>
+            <input type="email" id="spgEmail" name="email" placeholder="Enter your email">
+
+            <label for="spgTest">Test Name</label>
+            <select id="spgTest" name="test_name" required>
+                <option value="" disabled selected>Select Test</option>
+                <option>Ultrasound Scanning</option>
+                <option>Digital X-Ray</option>
+                <option>ECG</option>
+                <option>TMT</option>
+                <option>Endoscopy</option>
+                <option>TVS</option>
+                <option>NST</option>
+                <option>Cardiac Echo</option>
+                <option>Doppler</option>
+                <option>Physiotherapy</option>
+                <option>Super Speciality Consultation</option>
+            </select>
+
+            <label for="spgMessage">Patient Concerns (Optional)</label>
+            <textarea id="spgMessage" name="message" placeholder="Let us know your concerns or requests…"></textarea>
+
+            <button type="submit" class="confirm-btn" id="spgConfirmBooking">
+            Confirm Booking
+        </button>
+
+            <button type="button" class="close-btn" id="spgCloseModal">Cancel</button>
+        </form>
+    </div>
+</div>
+
+<!-- SUCCESS POPUP -->
+<div id="spgSuccessPopup" class="success-modal" style="display:none;">
+    <div class="success-content">
+        <span id="spgCloseSuccess" class="close-success">&times;</span>
+        <h2>Booking Successful! 🎉</h2>
+        <p>Thank you for your booking. We will contact you shortly.</p>
+    </div>
+</div>
+
+
+
+
+<section class="service-section">
+    <h2 class="service-title">Our Diagnostic Services</h2>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <h3>Ultrasound Scanning</h3>
+            <p>High-resolution imaging for abdomen, pelvis, thyroid, pregnancy & soft tissues.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <h3>Digital X-Ray</h3>
+            <p>Low-radiation digital X-ray for chest, spine, limbs & routine diagnosis.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+                <!-- 3 -->
+        <div class="service-card">
+            <h3>ECG</h3>
+            <p>Quick & accurate cardiac rhythm analysis for chest pain & heart monitoring.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="service-card">
+            <h3>TMT</h3>
+            <p>Stress test to evaluate heart performance during physical activity.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="service-card">
+            <h3>Endoscopy</h3>
+            <p>Detailed examination of digestive tract using advanced endoscopic equipment.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="service-card">
+            <h3>TVS</h3>
+            <p>Transvaginal ultrasound for gynecological & early pregnancy evaluations.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="service-card">
+            <h3>NST</h3>
+            <p>Fetal monitoring to assess baby's heartbeat & well-being.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="service-card">
+            <h3>Cardiac Echo</h3>
+            <p>Doppler-based cardiac imaging to evaluate heart chambers & valves.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="service-card">
+            <h3>Doppler</h3>
+            <p>Blood flow analysis for veins, arteries & pregnancy vascular checks.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="service-card">
+            <h3>Physiotherapy</h3>
+            <p>Pain relief, mobility restoration & rehabilitation by expert physiotherapists.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="service-card">
+            <h3>Super Speciality Consultation</h3>
+            <p>Expert consultations from cardiology, gastroenterology, orthopedics & more.</p>
+            <div class="service-actions">
+                <button class="servicebook-btn">Book Now</button>
+                <a href="tel:+918722202917" class="btn-call">Call</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SERVICE BOOKING POPUP -->
+<div id="ssbPopup" class="popup">
+  <div class="popup-content">
+
+    <!-- Close Button -->
+    <span class="popup-close-btn" onclick="closePopup()">&times;</span>
+
+    <h3>Book Your Test</h3>
+
+    <form id="ssbBookingForm" novalidate>
+
+      <label for="ssbTestName">Test Name</label>
+      <input type="text" id="ssbTestName" name="test_name" readonly>
+
+      <label for="ssbName">Name</label>
+      <input type="text" id="ssbName" name="name" placeholder="Enter your name" required>
+
+      <label for="ssbMobile">Mobile Number</label>
+      <input type="tel" id="ssbMobile" name="mobile" placeholder="Enter mobile number" required>
+
+      <label for="ssbEmail">Email</label>
+      <input type="email" id="ssbEmail" name="email" placeholder="Enter your email" required>
+
+      <button type="submit" class="submit-btn">Confirm Booking</button>
+
+      <p id="ssbSuccessMsg" class="success-msg">Booking Successful! 🎉 We will contact you soon.</p>
+    </form>
+
+  </div>
+</div>
+
+
+<section class="faq-section">
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+
+  <div class="faq-list">
+
+    <details>
+      <summary>Ultrasound Scanning</summary>
+      <p>Safe, painless scan used for abdomen, pregnancy, thyroid and soft tissues.</p>
+    </details>
+
+    <details>
+      <summary>Digital X-Ray</summary>
+      <p>Low-radiation digital imaging used for bones, chest and joint diagnosis.</p>
+    </details>
+
+    <details>
+      <summary>ECG</summary>
+      <p>Non-invasive test that records heart rhythm in just a few minutes.</p>
+    </details>
+
+    <details>
+      <summary>TMT (Stress Test)</summary>
+      <p>Performed while walking on a treadmill to check heart performance.</p>
+    </details>
+
+    <details>
+      <summary>Endoscopy</summary>
+      <p>Diagnostic test using a flexible camera, usually with mild sedation.</p>
+    </details>
+
+    <details>
+      <summary>TVS (Transvaginal Scan)</summary>
+      <p>Safe imaging for gynecology and early pregnancy assessment.</p>
+    </details>
+
+    <details>
+      <summary>NST</summary>
+      <p>Monitors fetal heartbeat and movements during pregnancy.</p>
+    </details>
+
+    <details>
+      <summary>Cardiac Echo</summary>
+      <p>Ultrasound of the heart chambers, valves, and blood flow.</p>
+    </details>
+
+    <details>
+      <summary>Doppler</summary>
+      <p>Examines blood flow in arteries, veins and pregnancy blood circulation.</p>
+    </details>
+
+    <details>
+      <summary>Physiotherapy</summary>
+      <p>Professional therapy for pain relief, mobility improvement and rehab.</p>
+    </details>
+
+    <details>
+      <summary>Super Speciality Consultation</summary>
+      <p>Expert doctors from cardiology, orthopedics, gastroenterology and more.</p>
+    </details>
+
+  </div>
+</section>
+
+
+<!-- Booking Popup -->
+<div id="fbfPopup" class="popup-overlay">
+  <div class="popup-box" id="fbfPopupBox">
+
+    <!-- Main Form Section -->
+    <div id="fbfMain">
+      <h2>Book Your Test</h2>
+
+      <form id="fbfBookingForm" onsubmit="event.preventDefault();">
+
+        <label for="fbfName">Full Name</label>
+        <input type="text" id="fbfName" name="name" required>
+
+        <label for="fbfMobile">Mobile Number</label>
+        <input type="tel" id="fbfMobile" name="mobile" required maxlength="10">
+
+        <label for="fbfEmail">Email ID</label>
+        <input type="email" id="fbfEmail" name="email">
+
+        <label for="fbfTest">Select Test</label>
+        <select id="fbfTest" name="test_name" required>
+            <option value="">Choose Test</option>
+
+            <!-- BASIC LAB TESTS -->
+            <optgroup label="🧪 Basic Lab Tests">
+                <option>Blood Test</option>
+                <option>Thyroid Test (TSH / T3 / T4)</option>
+                <option>Diabetes Test (HbA1c / Sugar Levels)</option>
+                <option>Liver Function Test (LFT)</option>
+                <option>Kidney Function Test (KFT)</option>
+                <option>Vitamin D Test</option>
+                <option>Vitamin B12 Test</option>
+                <option>Urine Routine Test</option>
+                <option>Complete Blood Count (CBC)</option>
+                <option>Fever Profile</option>
+                <option>Lipid Profile</option>
+            </optgroup>
+
+            <!-- HEALTH PACKAGES -->
+            <optgroup label="📦 RDC Health Packages">
+                <option>Basic Health Checkup Package</option>
+                <option>Complete Health Checkup Package</option>
+                <option>Diabetes Care Package</option>
+                <option>Thyroid Care Package</option>
+                <option>Women Wellness Package</option>
+                <option>Men Wellness Package</option>
+                <option>Senior Citizen Full Body Package</option>
+                <option>Pre-Employment Health Package</option>
+            </optgroup>
+
+            <!-- RADIOLOGY / IMAGING SERVICES -->
+            <optgroup label="🩻 Radiology & Advanced Imaging">
+                <option>Digital X-Ray</option>
+                <option>Ultrasound Scan (USG)</option>
+                <option>Doppler Scan</option>
+                <option>ECG</option>
+                <option>2D Echo</option>
+                <option>TMT (Stress Test)</option>
+                <option>Digital OPG</option>
+            </optgroup>
+        </select>
+
+        <div class="popup-buttons">
+            <button type="button" class="btn-lab" onclick="showLabConfirm()">
+            Book Lab Visit
+            </button>
+
+          <button type="button" class="btn-home" onclick="showNivaMessage()">
+            Home Sample Collection
+          </button>
+        </div>
+      </form>
+
+      <span class="close-popup" onclick="closePopup()">×</span>
+    </div>
+
+    <!-- Lab Visit Confirmation -->
+    <div id="fbfLabConfirm" class="popup-hidden">
+      <h2>Booking Confirmed!</h2>
+      <p>Your request is submitted successfully.<br>Our team will contact you shortly.</p>
+
+      <button class="btn-ok" id="fbfOkBtn">OK</button>
+
+    </div>
+
+    <!-- Niva Health Kare Message -->
+    <div id="fbfNivaMessage" class="popup-hidden">
+      <h2>Home Sample Collection</h2>
+      <p>
+        This service is provided by our sister company  
+        <strong>Niva Health Kare</strong>.<br><br>
+        Stay at home comfortably — our certified technician will visit your location.
+      </p>
+
+      <a href="https://nivahealthkare.com" target="_blank" class="btn-continue">
+        Continue to Niva Health Kare →
+      </a>
+
+      <button class="btn-back" onclick="showMainForm()">Back</button>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="diagnostic-footer">
+    <div class="footer-container">
+
+        <!-- About Section -->
+        <div class="footer-box">
+            <h3>About Us</h3>
+            <p>Trusted diagnostics and imaging services, <br> 
+            <strong>officially approved by CMC, Vellore.</strong></p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="location.html">Locate us</a></li>
+                <li><a href="Infrastructure.html">Laboratory Infrastructure</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-box">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>📍 #1222, 2nd Floor 80 Feet Road, Chandra Layout, Bengaluru -560040, Karnataka</li>
+                <li>📞 <a href="tel:+918722202917">+91 87222 02917</a></li>
+                <li>✉️ <a href="mailto:rdclab2001@gmail.com">rdclab2001@gmail.com</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-box">
+            <h3>Follow Us</h3>
+
+            <div class="footer-social">
+                <a href="https://www.instagram.com/raghavendradiagnosticcentre/" class="social-icon instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61584436204699" class="social-icon facebook" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@rdclab9760" class="social-icon youtube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom area with right-side links -->
+    <div class="footer-bottom">
+        <p>© 2025 Raghavendra Diagnostic Centre. All Rights Reserved.</p>
+
+        <div class="footer-legal-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms-and-conditions.html">Terms & Conditions</a>
+            <span>|</span>
+            <a href="security-and-privacy.html">Security & Privacy</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script/script.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        /* ============================
+        MAIN BOOK TEST POPUP (SPG)
+        ============================= */
+        const spgModal = document.getElementById("spgBookingModal");
+        const spgOpenBtn = document.getElementById("openBooking");
+        const spgCloseBtn = document.getElementById("spgCloseModal");
+        const spgForm = document.getElementById("spgBookingForm");
+        const spgSuccess = document.getElementById("spgSuccessPopup");
+        const spgSuccessClose = document.getElementById("spgCloseSuccess");
+
+        // Open modal
+        spgOpenBtn.addEventListener("click", () => {
+            spgModal.style.display = "flex";
+        });
+
+        // Close modal
+        spgCloseBtn.addEventListener("click", () => {
+            spgModal.style.display = "none";
+        });
+
+        // // Click outside close
+        // window.addEventListener("click", (e) => {
+        //     if (e.target === spgModal) spgModal.style.display = "none";
+        // });
+
+        // Submit SPG booking
+        spgForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const payload = {
+                name: spgForm.querySelector('[name="name"]').value.trim(),
+                mobile: spgForm.querySelector('[name="mobile"]').value.trim(),
+                email: spgForm.querySelector('[name="email"]').value.trim(),
+                test_name: spgForm.querySelector('[name="test_name"]').value.trim(),
+                message: spgForm.querySelector('[name="message"]').value.trim()
+            };
+
+            const res = await fetch("http://127.0.0.1:5000/book-test", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await res.json();
+            if (data.status !== "success") {
+                alert(data.message || "Submission failed");
+                return;
+            }
+
+            spgModal.style.display = "none";
+            spgSuccess.style.display = "flex";
+
+        });
+
+
+
+    spgSuccessClose?.addEventListener("click", () => {
+        spgSuccess.style.display = "none";
+    });
+
+
+
+
+        /* ============================
+        SERVICE CARD "BOOK NOW" POPUP
+        ============================= */
+        const ssbPopup = document.getElementById("ssbPopup");
+        const ssbForm = document.getElementById("ssbBookingForm");
+        const ssbTestName = document.getElementById("ssbTestName");
+        const ssbSuccess = document.getElementById("ssbSuccessMsg");
+
+        // Open popup on "Book Now"
+        document.querySelectorAll(".servicebook-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const test = btn.closest(".service-card").querySelector("h3").innerText;
+                ssbTestName.value = test;
+                ssbSuccess.style.display = "none";
+                ssbPopup.style.display = "flex";
+            });
+        });
+
+        // Close popup
+        window.closePopup = function () {
+            ssbPopup.style.display = "none";
+            ssbForm.reset();
+            ssbSuccess.style.display = "none";
+        };
+
+        // // Click outside to close
+        // window.addEventListener("click", (e) => {
+        //     if (e.target === ssbPopup) closePopup();
+        // });
+
+        // Submit service booking
+ssbForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const payload = {
+        name: ssbForm.querySelector('[name="name"]').value.trim(),
+        mobile: ssbForm.querySelector('[name="mobile"]').value.trim(),
+        email: ssbForm.querySelector('[name="email"]').value.trim(),
+        test_name: ssbForm.querySelector('[name="test_name"]').value.trim(),
+        message: ""
+    };
+
+    const res = await fetch("http://127.0.0.1:5000/book-test", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+    });
+
+    const data = await res.json();
+    if (data.status !== "success") {
+        alert(data.message || "Submission failed");
+        return;
+    }
+
+    ssbSuccess.style.display = "block";
+    // Do NOT reset form here
+});
+
+
+
+
+});
+</script>
+
+</body>
+</html>
